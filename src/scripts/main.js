@@ -38,13 +38,32 @@ function renderIndicators() {
   const ingressosComprados = todosPasseios.filter((passeio) => passeio.ingresso.comprado).length;
 
   const indicadores = [
-    `${totalDias} ${pluralize(totalDias, "dia", "dias")}`,
-    `${totalPasseios} ${pluralize(totalPasseios, "passeio", "passeios")}`,
-    `${ingressosComprados} ingressos comprados`
+    {
+      icon: "dashboard",
+      text: `${totalDias} ${pluralize(totalDias, "Dia", "Dias")}`,
+      emphasized: false
+    },
+    {
+      icon: "hiking",
+      text: `${totalPasseios} ${pluralize(totalPasseios, "Passeio", "Passeios")}`,
+      emphasized: false
+    },
+    {
+      icon: "confirmation_number",
+      text: `${ingressosComprados} Ingressos Comprados`,
+      emphasized: true
+    }
   ];
 
   elements.tripIndicators.innerHTML = indicadores
-    .map((item) => `<li class="indicator-pill">${item}</li>`)
+    .map(
+      (item) => `
+        <li class="indicator-pill ${item.emphasized ? "is-emphasis" : ""}">
+          <span class="material-symbols-outlined indicator-icon" aria-hidden="true">${item.icon}</span>
+          ${item.text}
+        </li>
+      `
+    )
     .join("");
 }
 

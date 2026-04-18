@@ -1,7 +1,7 @@
 ﻿export const roteiro = {
   viagem: {
-    titulo: "Roteiro de Viagem — Foz do Iguaçu",
-    periodo: "12 a 15 de outubro",
+    titulo: "Roteiro — Foz do Iguaçu",
+    periodo: "23 — 28 de Abril",
     local: "Foz do Iguaçu"
   },
   dias: [
