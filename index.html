@@ -1,288 +1,95 @@
-<!DOCTYPE html>
-
-<html lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Roteiro — Foz do Iguaçu</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "outline-variant": "#acb3b2",
-                        "primary": "#546168",
-                        "primary-container": "#d7e4ec",
-                        "secondary-fixed": "#c5edc7",
-                        "tertiary-fixed": "#cde6f4",
-                        "on-secondary-fixed-variant": "#416346",
-                        "inverse-on-surface": "#9b9d9d",
-                        "primary-fixed-dim": "#c9d6de",
-                        "on-secondary": "#e9ffe7",
-                        "surface-container": "#eaefee",
-                        "on-primary-container": "#47545a",
-                        "surface": "#f8faf9",
-                        "on-background": "#2d3433",
-                        "tertiary": "#4b626e",
-                        "surface-tint": "#546168",
-                        "on-primary-fixed": "#354147",
-                        "on-tertiary-fixed": "#2b424d",
-                        "background": "#f8faf9",
-                        "surface-container-highest": "#dde4e3",
-                        "surface-bright": "#f8faf9",
-                        "on-surface": "#2d3433",
-                        "on-error": "#fff7f6",
-                        "tertiary-fixed-dim": "#bfd8e5",
-                        "surface-variant": "#dde4e3",
-                        "tertiary-container": "#cde6f4",
-                        "surface-dim": "#d4dbda",
-                        "outline": "#757c7b",
-                        "primary-dim": "#49555b",
-                        "error-dim": "#67040d",
-                        "on-secondary-fixed": "#25462b",
-                        "inverse-primary": "#e6f3fb",
-                        "secondary-dim": "#395b3e",
-                        "secondary": "#446749",
-                        "on-tertiary": "#f2faff",
-                        "error": "#a83836",
-                        "on-error-container": "#6e0a12",
-                        "on-secondary-container": "#37593d",
-                        "surface-container-low": "#f1f4f3",
-                        "tertiary-dim": "#3f5661",
-                        "on-surface-variant": "#596060",
-                        "on-primary": "#f3faff",
-                        "on-tertiary-container": "#3e5560",
-                        "inverse-surface": "#0b0f0f",
-                        "error-container": "#fa746f",
-                        "on-primary-fixed-variant": "#515d64",
-                        "primary-fixed": "#d7e4ec",
-                        "secondary-container": "#c5edc7",
-                        "surface-container-high": "#e4e9e8",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary-fixed-variant": "#475f6a",
-                        "secondary-fixed-dim": "#b7deb9"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "fontFamily": {
-                        "headline": ["Manrope"],
-                        "body": ["Manrope"],
-                        "label": ["Manrope"]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        body { font-family: 'Manrope', sans-serif; }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        .tonal-shift { background-color: rgba(241, 244, 243, 0.8); }
-    </style>
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roteiro de Viagem | Foz do Iguaçu</title>
+  <meta name="description" content="Guia pessoal de viagem para Foz do Iguaçu, organizado por dia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/normalize.css">
+  <link rel="stylesheet" href="src/styles/main.css">
 </head>
-<body class="bg-surface text-on-surface selection:bg-primary-container">
-<!-- Top Navigation Shell -->
-<nav class="fixed top-0 w-full z-50 bg-slate-50/85 backdrop-blur-xl shadow-sm shadow-slate-200/50 flex justify-between items-center px-6 py-4">
-<span class="text-lg font-bold tracking-tighter text-slate-800">Ethereal Foz</span>
-<div class="hidden md:flex items-center gap-8 font-['Manrope'] text-sm tracking-tight font-medium">
-<a class="text-slate-900 font-bold" href="#">Itinerary</a>
-<a class="text-slate-500 hover:opacity-70 transition-opacity" href="#">Explore</a>
-<a class="text-slate-500 hover:opacity-70 transition-opacity" href="#">Passes</a>
-<a class="text-slate-500 hover:opacity-70 transition-opacity" href="#">Saved</a>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-slate-700" data-icon="account_circle">account_circle</span>
-</div>
-</nav>
-<!-- Main Content Canvas -->
-<main class="max-w-3xl mx-auto px-6 pt-24 pb-32">
-<!-- Header Section -->
-<header class="mb-12">
-<div class="space-y-1">
-<h1 class="text-4xl font-extrabold tracking-tight text-on-surface">Roteiro — Foz do Iguaçu</h1>
-<p class="text-xl font-medium text-primary">12 — 15 Outubro</p>
-</div>
-<div class="mt-6 flex flex-wrap gap-4 items-center">
-<div class="px-4 py-2 bg-surface-container rounded-full text-sm font-semibold tracking-wide text-on-surface-variant flex items-center gap-2">
-<span class="material-symbols-outlined text-sm" data-icon="dashboard">dashboard</span>
-                    4 Dias
-                </div>
-<div class="px-4 py-2 bg-surface-container rounded-full text-sm font-semibold tracking-wide text-on-surface-variant flex items-center gap-2">
-<span class="material-symbols-outlined text-sm" data-icon="hiking">hiking</span>
-                    8 Passeios
-                </div>
-<div class="px-4 py-2 bg-secondary-container rounded-full text-sm font-bold tracking-wide text-on-secondary-container flex items-center gap-2">
-<span class="material-symbols-outlined text-sm" data-icon="confirmation_number">confirmation_number</span>
-                    6 Ingressos Comprados
-                </div>
-</div>
-</header>
-<!-- Day Navigation -->
-<div class="flex gap-2 overflow-x-auto pb-4 scrollbar-hide mb-10">
-<button class="px-6 py-3 rounded-full bg-primary text-on-primary font-bold text-sm transition-all active:scale-95 whitespace-nowrap shadow-sm shadow-primary/20">Dia 1</button>
-<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm transition-all hover:bg-surface-container-highest whitespace-nowrap">Dia 2</button>
-<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm transition-all hover:bg-surface-container-highest whitespace-nowrap">Dia 3</button>
-<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm transition-all hover:bg-surface-container-highest whitespace-nowrap">Dia 4</button>
-</div>
-<!-- Day Summary Section -->
-<section class="mb-12 bg-surface-container-low rounded-xl p-8 relative overflow-hidden">
-<div class="relative z-10">
-<p class="label-md uppercase tracking-[0.1rem] text-primary font-bold mb-2">Segunda-feira, 12 de Outubro</p>
-<h2 class="text-2xl font-bold mb-3">Dia 1 — O Despertar das Águas</h2>
-<div class="flex items-center gap-3 text-on-surface-variant mb-6">
-<span class="material-symbols-outlined text-lg" data-icon="layers">layers</span>
-<span class="font-medium">2 Passeios</span>
-</div>
-<p class="text-lg leading-relaxed text-on-surface-variant italic border-l-2 border-primary pl-4">
-                    "Dia de contemplação e contato direto com a Garganta do Diabo"
-                </p>
-</div>
-<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl"></div>
-</section>
-<!-- Activity Card -->
-<div class="space-y-8">
-<article class="bg-surface-container-lowest rounded-xl p-6 md:p-8 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.03)] border border-outline-variant/10">
-<!-- Header Component -->
-<div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-8">
-<div>
-<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-bold bg-error-container/20 text-error-dim uppercase tracking-wider mb-3">
-                            Prioridade Alta
-                        </span>
-<h3 class="text-2xl font-bold text-on-surface leading-tight">1. Cataratas do Iguaçu (Brasil)</h3>
-</div>
-<div class="flex-shrink-0">
-<div class="w-full h-24 md:w-32 md:h-32 rounded-xl bg-cover bg-center" data-alt="magnificent aerial view of Iguazu Falls with massive waterfalls plunging into a misty canyon under a bright sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCB-DfnDGzVz2A1Z7R-xxzYVoDZNd-P2c72k6Ekz7J-uexwmKor9caM13otEstfEoMOxUAd_kO93lcmKDpPvhV5H9gmCl5S0fJQXxZtWB6G6z_wENCX1jJqyjmtpNO-3UM_YFGU6LUI-kKUXaFWmgcuzn6bIpmmv-1z5VcZPnNtb85qUAiBTD_nfN8fCHlzKhIqN4S20MjEsrD6xN_EbMCHzdZnUGrXmuyum57WSeRvHVltUV4hWlbl5R8HlC7actcP7jQr7yIiFzJ4')"></div>
-</div>
-</div>
-<!-- Content Grid (Bento Style) -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<!-- Address Block -->
-<div class="bg-surface-container-low rounded-xl p-5 space-y-4">
-<div class="flex items-center gap-3 text-primary">
-<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-<h4 class="font-bold text-sm uppercase tracking-wider">Endereço e mapa</h4>
-</div>
-<p class="text-on-surface-variant text-sm">Rodovia das Cataratas, BR-469, KM 18</p>
-<div class="flex gap-2">
-<button class="flex-1 py-2 px-3 bg-surface-container-lowest text-xs font-bold rounded-lg flex items-center justify-center gap-2 border border-outline-variant/20 hover:bg-white transition-colors">
-<span class="material-symbols-outlined text-sm" data-icon="content_copy">content_copy</span>
-                                Copiar
-                            </button>
-<button class="flex-1 py-2 px-3 bg-primary text-on-primary text-xs font-bold rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
-<span class="material-symbols-outlined text-sm" data-icon="map">map</span>
-                                Abrir mapa
-                            </button>
-</div>
-</div>
-<!-- Tickets Block -->
-<div class="bg-surface-container-low rounded-xl p-5 space-y-4">
-<div class="flex items-center gap-3 text-primary">
-<span class="material-symbols-outlined" data-icon="payments">payments</span>
-<h4 class="font-bold text-sm uppercase tracking-wider">Ingressos</h4>
-</div>
-<div class="flex items-end justify-between">
-<span class="text-2xl font-extrabold text-on-surface">R$ 88,00</span>
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-black uppercase tracking-widest rounded-full">Comprado: Sim</span>
-</div>
-<button class="w-full py-2.5 bg-surface-container-highest text-on-surface text-xs font-bold rounded-lg hover:bg-outline-variant/20 transition-colors">Site oficial</button>
-</div>
-<!-- Operations Block -->
-<div class="bg-surface-container-low rounded-xl p-5 space-y-3">
-<div class="flex items-center gap-3 text-primary">
-<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
-<h4 class="font-bold text-sm uppercase tracking-wider">Funcionamento</h4>
-</div>
-<div class="flex justify-between items-center text-sm">
-<span class="text-on-surface-variant">Todos os dias</span>
-<span class="font-bold text-on-surface">09:00 — 16:00</span>
-</div>
-</div>
-<!-- Planning Block -->
-<div class="bg-surface-container-low rounded-xl p-5 space-y-3">
-<div class="flex items-center gap-3 text-primary">
-<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
-<h4 class="font-bold text-sm uppercase tracking-wider">Planejamento</h4>
-</div>
-<div class="grid grid-cols-3 gap-2 text-[10px] font-bold text-center uppercase tracking-tighter">
-<div class="p-2 bg-surface-container-lowest rounded-md">
-<p class="text-primary-dim mb-1">Melhor</p>
-<p class="text-on-surface">Manhã</p>
-</div>
-<div class="p-2 bg-surface-container-lowest rounded-md">
-<p class="text-primary-dim mb-1">Trajeto</p>
-<p class="text-on-surface">30min</p>
-</div>
-<div class="p-2 bg-surface-container-lowest rounded-md">
-<p class="text-primary-dim mb-1">Duração</p>
-<p class="text-on-surface">3 horas</p>
-</div>
-</div>
-</div>
-<!-- Checklist Block -->
-<div class="bg-surface-container-low rounded-xl p-5 col-span-1 md:col-span-2">
-<div class="flex items-center gap-3 text-primary mb-4">
-<span class="material-symbols-outlined" data-icon="checklist">checklist</span>
-<h4 class="font-bold text-sm uppercase tracking-wider">Checklist</h4>
-</div>
-<div class="flex flex-wrap gap-3">
-<div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-outline-variant/10 text-xs font-semibold">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
-                                Capa de chuva
-                            </div>
-<div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-outline-variant/10 text-xs font-semibold">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
-                                Protetor solar
-                            </div>
-<div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-outline-variant/10 text-xs font-semibold">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
-                                Documento
-                            </div>
-<div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-outline-variant/10 text-xs font-semibold">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
-                                Garrafa d’água
-                            </div>
-</div>
-</div>
-<!-- Notes Block -->
-<div class="col-span-1 md:col-span-2 border-t border-outline-variant/20 pt-6">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary-container p-2 bg-primary rounded-lg text-white" data-icon="sticky_note_2">sticky_note_2</span>
-<div>
-<h4 class="font-bold text-sm uppercase tracking-wider text-primary mb-1">Notas</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">Fazer primeiro e deixar Parque das Aves para depois. Pode ter bastante caminhada.</p>
-</div>
-</div>
-</div>
-</div>
-</article>
-</div>
-</main>
-<!-- Bottom Navigation Shell -->
-<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-slate-50 rounded-t-3xl shadow-[0_-4px_20px_rgba(0,0,0,0.03)] md:hidden">
-<a class="flex flex-col items-center justify-center bg-emerald-100/80 text-emerald-900 rounded-full px-5 py-2 active:scale-90 transition-all duration-300" href="#">
-<span class="material-symbols-outlined mb-0.5" data-icon="calendar_month">calendar_month</span>
-<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-[0.05rem]">Itinerary</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-500 hover:text-emerald-700 active:scale-90 transition-all duration-300" href="#">
-<span class="material-symbols-outlined mb-0.5" data-icon="explore">explore</span>
-<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-[0.05rem]">Explore</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-500 hover:text-emerald-700 active:scale-90 transition-all duration-300" href="#">
-<span class="material-symbols-outlined mb-0.5" data-icon="confirmation_number">confirmation_number</span>
-<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-[0.05rem]">Passes</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-500 hover:text-emerald-700 active:scale-90 transition-all duration-300" href="#">
-<span class="material-symbols-outlined mb-0.5" data-icon="bookmark">bookmark</span>
-<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-[0.05rem]">Saved</span>
-</a>
-</nav>
-</body></html>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="header-kicker">Guia pessoal de viagem</p>
+      <h1 id="trip-title" class="trip-title"></h1>
+      <p id="trip-period" class="trip-period"></p>
+      <ul id="trip-indicators" class="indicator-list" aria-label="Indicadores gerais"></ul>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <section aria-labelledby="days-nav-title" class="days-section">
+      <h2 id="days-nav-title" class="section-title">Dias do roteiro</h2>
+      <nav id="day-nav" class="day-nav" aria-label="Selecionar dia"></nav>
+    </section>
+
+    <section id="day-summary" class="day-summary" aria-live="polite"></section>
+
+    <section aria-labelledby="activities-title" class="activities-section">
+      <h2 id="activities-title" class="section-title">Passeios</h2>
+      <div id="activities" class="activities-grid"></div>
+    </section>
+  </main>
+
+  <template id="activity-card-template">
+    <article class="activity-card">
+      <header class="activity-header">
+        <div>
+          <p class="activity-index"></p>
+          <h3 class="activity-name"></h3>
+        </div>
+        <span class="priority-badge"></span>
+      </header>
+
+      <section class="info-block">
+        <h4>Endereço e mapa</h4>
+        <p class="activity-address"></p>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost action-copy">Copiar endereço</button>
+          <a class="btn btn-primary action-map" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+        </div>
+      </section>
+
+      <section class="info-block">
+        <h4>Ingressos</h4>
+        <p class="ticket-price"></p>
+        <p class="ticket-status"></p>
+        <a class="btn btn-ghost action-official" target="_blank" rel="noopener noreferrer">Link oficial</a>
+      </section>
+
+      <section class="info-block info-grid">
+        <h4>Funcionamento</h4>
+        <p><strong>Dias:</strong> <span class="open-days"></span></p>
+        <p><strong>Entrada:</strong> <span class="open-hours"></span></p>
+      </section>
+
+      <section class="info-block info-grid">
+        <h4>Planejamento</h4>
+        <p><strong>Melhor horário:</strong> <span class="best-time"></span></p>
+        <p><strong>Deslocamento:</strong> <span class="travel-time"></span></p>
+        <p><strong>Duração:</strong> <span class="duration"></span></p>
+      </section>
+
+      <section class="info-block">
+        <h4>Checklist</h4>
+        <ul class="checklist"></ul>
+      </section>
+
+      <section class="info-block notes">
+        <h4>Notas</h4>
+        <p class="notes-text"></p>
+      </section>
+    </article>
+  </template>
+
+  <p id="toast" class="toast" role="status" aria-live="polite" hidden></p>
+
+  <script type="module" src="src/scripts/main.js"></script>
+</body>
+</html>
