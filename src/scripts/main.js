@@ -1,5 +1,8 @@
 ﻿import { roteiro } from "../../data/roteiro.js";
 
+const DEFAULT_ACTIVITY_IMAGE =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCB-DfnDGzVz2A1Z7R-xxzYVoDZNd-P2c72k6Ekz7J-uexwmKor9caM13otEstfEoMOxUAd_kO93lcmKDpPvhV5H9gmCl5S0fJQXxZtWB6G6z_wENCX1jJqyjmtpNO-3UM_YFGU6LUI-kKUXaFWmgcuzn6bIpmmv-1z5VcZPnNtb85qUAiBTD_nfN8fCHlzKhIqN4S20MjEsrD6xN_EbMCHzdZnUGrXmuyum57WSeRvHVltUV4hWlbl5R8HlC7actcP7jQr7yIiFzJ4";
+
 const state = {
   diaAtivoId: getInitialDayId()
 };
@@ -95,10 +98,16 @@ function renderDaySummary() {
   const passeioCount = diaAtual.passeios.length;
 
   elements.daySummary.innerHTML = `
-    <p class="day-date">${diaAtual.data}</p>
-    <h2 class="day-title">${diaAtual.titulo}</h2>
-    <p class="day-meta">${passeioCount} ${pluralize(passeioCount, "passeio", "passeios")}</p>
-    <p class="day-observation">${diaAtual.observacao}</p>
+    <div class="day-summary-content">
+      <p class="day-date">${diaAtual.data}</p>
+      <h2 class="day-title">${diaAtual.titulo}</h2>
+      <div class="day-meta">
+        <span class="material-symbols-outlined day-meta-icon" aria-hidden="true">layers</span>
+        <span>${passeioCount} ${pluralize(passeioCount, "Passeio", "Passeios")}</span>
+      </div>
+      <p class="day-observation">"${diaAtual.observacao}"</p>
+    </div>
+    <div class="day-summary-glow" aria-hidden="true"></div>
   `;
 }
 
@@ -111,12 +120,14 @@ function renderActivities() {
     const fragment = elements.activityTemplate.content.cloneNode(true);
     const card = fragment.querySelector(".activity-card");
 
-    card.querySelector(".activity-index").textContent = `Passeio ${index + 1}`;
-    card.querySelector(".activity-name").textContent = passeio.nome;
+    card.querySelector(".activity-name").textContent = `${index + 1}. ${passeio.nome}`;
 
     const priorityBadge = card.querySelector(".priority-badge");
     priorityBadge.textContent = `Prioridade ${passeio.prioridade}`;
     priorityBadge.classList.add(`priority-${normalizePriority(passeio.prioridade)}`);
+
+    const activityImage = card.querySelector(".activity-image");
+    activityImage.style.backgroundImage = `url('${passeio.imagem || DEFAULT_ACTIVITY_IMAGE}')`;
 
     card.querySelector(".activity-address").textContent = passeio.endereco;
 
@@ -126,22 +137,30 @@ function renderActivities() {
     const officialLink = card.querySelector(".action-official");
     officialLink.href = passeio.ingresso.oficial;
 
-    card.querySelector(".ticket-price").textContent = `Valor: ${passeio.ingresso.valor}`;
+    card.querySelector(".ticket-price").textContent = `${passeio.ingresso.valor}`;
 
-    const ticketStatus = card.querySelector(".ticket-status");
-    ticketStatus.textContent = passeio.ingresso.comprado ? "Status: Comprado" : "Status: Pendente";
+    const ticketStatus = card.querySelector(".ticket-status-badge");
+    ticketStatus.textContent = passeio.ingresso.comprado ? "Comprado: Sim" : "Comprado: Não";
     ticketStatus.classList.toggle("is-positive", passeio.ingresso.comprado);
+    ticketStatus.classList.toggle("is-pending", !passeio.ingresso.comprado);
 
     card.querySelector(".open-days").textContent = passeio.funcionamento.dias;
     card.querySelector(".open-hours").textContent = passeio.funcionamento.entrada;
 
-    card.querySelector(".best-time").textContent = passeio.planejamento.melhorHorario;
-    card.querySelector(".travel-time").textContent = passeio.planejamento.deslocamento;
-    card.querySelector(".duration").textContent = passeio.planejamento.duracao;
+    card.querySelector(".distance").textContent = passeio.planejamento.distancia;
+    card.querySelector(".time").textContent = passeio.planejamento.tempo;
+    card.querySelector(".cost").textContent = passeio.planejamento.valor;
 
     const checklist = card.querySelector(".checklist");
     checklist.innerHTML = passeio.checklist
-      .map((item) => `<li class="check-item">${item}</li>`)
+      .map(
+        (item) => `
+          <li class="check-item">
+            <span class="material-symbols-outlined check-icon" aria-hidden="true">check_circle</span>
+            ${item}
+          </li>
+        `
+      )
       .join("");
 
     card.querySelector(".notes-text").textContent = passeio.notas;

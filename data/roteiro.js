@@ -27,9 +27,9 @@
             entrada: "09:00 às 16:00"
           },
           planejamento: {
-            melhorHorario: "Manhã",
-            deslocamento: "30 min do centro",
-            duracao: "3 a 4 horas"
+            distancia: "27km",
+            tempo: "~ 3hs",
+            valor: "R$ 97,00"
           },
           checklist: ["Protetor solar", "Capa de chuva", "Garrafa d'água", "Documento"],
           notas: "Priorizar este passeio cedo para evitar filas e calor intenso."
@@ -49,9 +49,9 @@
             entrada: "08:30 às 16:30"
           },
           planejamento: {
-            melhorHorario: "Após almoço",
-            deslocamento: "5 min das Cataratas",
-            duracao: "1h30 a 2h"
+            distancia: "16 km do centro",
+            tempo: "1h30 a 2h",
+            valor: "R$ 80,00"
           },
           checklist: ["Celular carregado", "Repelente", "Boné"],
           notas: "Excelente sequência após as Cataratas por ser ao lado da entrada do parque."
@@ -80,9 +80,9 @@
             entrada: "13:30 às 21:00"
           },
           planejamento: {
-            melhorHorario: "Fim da tarde",
-            deslocamento: "20 min do centro",
-            duracao: "2 horas"
+            distancia: "12 km do centro",
+            tempo: "2 horas",
+            valor: "R$ 55,00"
           },
           checklist: ["Documento", "Câmera", "Agasalho leve"],
           notas: "Chegar no pôr do sol para aproveitar a vista e o show noturno."
@@ -102,9 +102,9 @@
             entrada: "12:00 às 21:00"
           },
           planejamento: {
-            melhorHorario: "Noite",
-            deslocamento: "35 min do centro",
-            duracao: "1h30"
+            distancia: "18 km do centro",
+            tempo: "1h30",
+            valor: "Sem ingresso"
           },
           checklist: ["Documento original", "Cartão habilitado internacional"],
           notas: "Verificar cotação antes e priorizar itens planejados para evitar compras por impulso."
@@ -133,9 +133,9 @@
             entrada: "08:00 às 16:00"
           },
           planejamento: {
-            melhorHorario: "Manhã cedo",
-            deslocamento: "50 min da fronteira",
-            duracao: "Dia inteiro"
+            distancia: "30 km do centro",
+            tempo: "Dia inteiro",
+            valor: "AR$ consultar no site"
           },
           checklist: ["Passaporte ou RG", "Tênis confortável", "Lanche"],
           notas: "Checar fila da imigração e levar documento físico em bom estado."
@@ -164,9 +164,9 @@
             entrada: "08:30 às 17:00"
           },
           planejamento: {
-            melhorHorario: "Manhã",
-            deslocamento: "25 min do centro",
-            duracao: "1h30"
+            distancia: "13 km do centro",
+            tempo: "1h30",
+            valor: "R$ 59,00"
           },
           checklist: ["Documento", "Chegar com 15 min de antecedência"],
           notas: "Ideal para finalizar a viagem com baixa exigência física."

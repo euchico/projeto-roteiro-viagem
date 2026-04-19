@@ -19,7 +19,7 @@
   <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
 
   <header class="site-header">
-    <div class="container">
+    <div class="content-width">
       <p class="header-kicker">Guia pessoal de viagem</p>
       <div class="trip-heading-group">
         <h1 id="trip-title" class="trip-title"></h1>
@@ -29,7 +29,7 @@
     </div>
   </header>
 
-  <main id="conteudo-principal" class="container">
+  <main id="conteudo-principal" class="main-content content-width">
     <section aria-labelledby="days-nav-title" class="days-section">
       <h2 id="days-nav-title" class="section-title">Dias do roteiro</h2>
       <nav id="day-nav" class="day-nav" aria-label="Selecionar dia"></nav>
@@ -46,51 +46,96 @@
   <template id="activity-card-template">
     <article class="activity-card">
       <header class="activity-header">
-        <div>
-          <p class="activity-index"></p>
+        <div class="activity-head-main">
+          <span class="priority-badge"></span>
           <h3 class="activity-name"></h3>
         </div>
-        <span class="priority-badge"></span>
+        <div class="activity-media" aria-hidden="true">
+          <div class="activity-image"></div>
+        </div>
       </header>
 
-      <section class="info-block">
-        <h4>Endereço e mapa</h4>
+      <div class="activity-content-grid">
+      <section class="info-block card-block">
+        <div class="block-head">
+          <span class="material-symbols-outlined block-icon" aria-hidden="true">location_on</span>
+          <h4>Endereço e mapa</h4>
+        </div>
         <p class="activity-address"></p>
         <div class="actions">
-          <button type="button" class="btn btn-ghost action-copy">Copiar endereço</button>
-          <a class="btn btn-primary action-map" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          <button type="button" class="btn btn-ghost action-copy">
+            <span class="material-symbols-outlined btn-icon" aria-hidden="true">content_copy</span>
+            Copiar endereço
+          </button>
+          <a class="btn btn-primary action-map" target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined btn-icon" aria-hidden="true">map</span>
+            Abrir mapa
+          </a>
         </div>
       </section>
 
-      <section class="info-block">
-        <h4>Ingressos</h4>
-        <p class="ticket-price"></p>
-        <p class="ticket-status"></p>
-        <a class="btn btn-ghost action-official" target="_blank" rel="noopener noreferrer">Link oficial</a>
+      <section class="info-block card-block">
+        <div class="block-head">
+          <span class="material-symbols-outlined block-icon" aria-hidden="true">payments</span>
+          <h4>Ingressos</h4>
+        </div>
+        <div class="ticket-meta-row">
+          <p class="ticket-price"></p>
+          <p class="ticket-status-badge"></p>
+        </div>
+        <a class="btn btn-soft action-official" target="_blank" rel="noopener noreferrer">Link oficial</a>
       </section>
 
-      <section class="info-block info-grid">
-        <h4>Funcionamento</h4>
-        <p><strong>Dias:</strong> <span class="open-days"></span></p>
-        <p><strong>Entrada:</strong> <span class="open-hours"></span></p>
+      <section class="info-block card-block">
+        <div class="block-head">
+          <span class="material-symbols-outlined block-icon" aria-hidden="true">schedule</span>
+          <h4>Funcionamento</h4>
+        </div>
+        <div class="operation-row">
+          <span class="open-days"></span>
+          <strong class="open-hours"></strong>
+        </div>
       </section>
 
-      <section class="info-block info-grid">
-        <h4>Planejamento</h4>
-        <p><strong>Melhor horário:</strong> <span class="best-time"></span></p>
-        <p><strong>Deslocamento:</strong> <span class="travel-time"></span></p>
-        <p><strong>Duração:</strong> <span class="duration"></span></p>
+      <section class="info-block card-block">
+        <div class="block-head">
+          <span class="material-symbols-outlined block-icon" aria-hidden="true">event_note</span>
+          <h4>Planejamento</h4>
+        </div>
+        <div class="planning-grid">
+          <div class="planning-item">
+            <p class="planning-label">Distância</p>
+            <p class="planning-value distance"></p>
+          </div>
+          <div class="planning-item">
+            <p class="planning-label">Tempo</p>
+            <p class="planning-value time"></p>
+          </div>
+          <div class="planning-item">
+            <p class="planning-label">Valor</p>
+            <p class="planning-value cost"></p>
+          </div>
+        </div>
       </section>
 
-      <section class="info-block">
-        <h4>Checklist</h4>
+      <section class="info-block card-block checklist-block">
+        <div class="block-head">
+          <span class="material-symbols-outlined block-icon" aria-hidden="true">checklist</span>
+          <h4>Checklist</h4>
+        </div>
         <ul class="checklist"></ul>
       </section>
 
-      <section class="info-block notes">
-        <h4>Notas</h4>
-        <p class="notes-text"></p>
+      <section class="notes">
+        <div class="notes-inner">
+          <span class="material-symbols-outlined notes-icon" aria-hidden="true">sticky_note_2</span>
+          <div>
+            <h4>Notas</h4>
+            <p class="notes-text"></p>
+          </div>
+        </div>
       </section>
+      </div>
     </article>
   </template>
 
