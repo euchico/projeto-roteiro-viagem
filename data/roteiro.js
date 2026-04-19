@@ -1,16 +1,16 @@
 ﻿export const roteiro = {
   viagem: {
     titulo: "Roteiro — Foz do Iguaçu",
-    periodo: "23 — 28 de Abril",
+    periodo: "24 — 27 de Abril",
     local: "Foz do Iguaçu"
   },
   dias: [
     {
       id: "dia-1",
       label: "Dia 1",
-      titulo: "Dia 1 — Cataratas e Parque das Aves",
-      data: "Segunda-feira, 12 de outubro",
-      observacao: "Dia de contemplação e caminhadas leves, ideal para começar com calma.",
+      titulo: "Dia 1 — Natureza e primeiros impactos",
+      data: "24 de abril",
+      observacao: "Dia intenso com principais atrações naturais. Priorizar energia e organização.",
       passeios: [
         {
           nome: "Cataratas do Iguaçu (Brasil)",
@@ -18,21 +18,43 @@
           endereco: "Rodovia BR-469, Km 18, Foz do Iguaçu - PR",
           mapa: "https://maps.google.com/?q=Cataratas+do+Iguacu+Brasil",
           ingresso: {
-            valor: "R$ 97,00",
-            comprado: true,
+            valor: "R$ 118,00",
+            comprado: false,
             oficial: "https://cataratasdoiguacu.com.br"
           },
           funcionamento: {
             dias: "Todos os dias",
-            entrada: "09:00 às 16:00"
+            entrada: "{{SEM INFORMAÇÃO}}"
           },
           planejamento: {
-            distancia: "27km",
-            tempo: "~ 3hs",
-            valor: "R$ 97,00"
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "2h a 3h",
+            valor: "R$ 118,00"
           },
-          checklist: ["Protetor solar", "Capa de chuva", "Garrafa d'água", "Documento"],
-          notas: "Priorizar este passeio cedo para evitar filas e calor intenso."
+          checklist: ["Repelente", "Protetor solar", "Garrafa d'água"],
+          notas: "Passeio principal do dia. Pode ter bastante caminhada."
+        },
+        {
+          nome: "Macuco Safari",
+          prioridade: "Alta",
+          endereco: "Dentro do Parque Nacional do Iguaçu",
+          mapa: "https://maps.google.com/?q=Macuco+Safari",
+          ingresso: {
+            valor: "R$ 384,00",
+            comprado: false,
+            oficial: "https://macucosafari.com.br"
+          },
+          funcionamento: {
+            dias: "Todos os dias",
+            entrada: "{{SEM INFORMAÇÃO}}"
+          },
+          planejamento: {
+            distancia: "Mesmo local das Cataratas",
+            tempo: "1h30",
+            valor: "R$ 384,00"
+          },
+          checklist: ["Roupa extra", "Capa de chuva", "Protetor solar"],
+          notas: "Passeio molhado. Levar troca de roupa obrigatoriamente."
         },
         {
           nome: "Parque das Aves",
@@ -40,136 +62,268 @@
           endereco: "Av. das Cataratas, 12450, Foz do Iguaçu - PR",
           mapa: "https://maps.google.com/?q=Parque+das+Aves+Foz+do+Iguacu",
           ingresso: {
-            valor: "R$ 80,00",
+            valor: "R$ 110,00",
             comprado: false,
             oficial: "https://www.parquedasaves.com.br"
           },
           funcionamento: {
             dias: "Todos os dias",
-            entrada: "08:30 às 16:30"
+            entrada: "{{SEM INFORMAÇÃO}}"
           },
           planejamento: {
-            distancia: "16 km do centro",
+            distancia: "Ao lado das Cataratas",
             tempo: "1h30 a 2h",
-            valor: "R$ 80,00"
+            valor: "R$ 110,00"
           },
-          checklist: ["Celular carregado", "Repelente", "Boné"],
-          notas: "Excelente sequência após as Cataratas por ser ao lado da entrada do parque."
+          checklist: ["Repelente", "Celular carregado"],
+          notas: "Pode ser feito após as Cataratas."
+        },
+        {
+          nome: "Avenida Pedro Basso",
+          prioridade: "Baixa",
+          endereco: "Av. Pedro Basso, Foz do Iguaçu - PR",
+          mapa: "https://maps.google.com/?q=Avenida+Pedro+Basso",
+          ingresso: {
+            valor: "Grátis",
+            comprado: true,
+            oficial: "{{SEM INFORMAÇÃO}}"
+          },
+          funcionamento: {
+            dias: "Todos os dias",
+            entrada: "Livre"
+          },
+          planejamento: {
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "Livre",
+            valor: "Grátis"
+          },
+          checklist: [],
+          notas: "Passeio leve ou deslocamento. Verificar intenção real no roteiro."
         }
       ]
     },
     {
       id: "dia-2",
       label: "Dia 2",
-      titulo: "Dia 2 — Fronteira e compras",
-      data: "Terça-feira, 13 de outubro",
-      observacao: "Dia para logística simples e ritmo mais flexível.",
+      titulo: "Dia 2 — Cultura e Itaipu",
+      data: "25 de abril",
+      observacao: "Dia equilibrado entre passeio técnico e cultural.",
       passeios: [
         {
-          nome: "Marco das Três Fronteiras",
-          prioridade: "Média",
-          endereco: "Av. General Meira, s/n, Foz do Iguaçu - PR",
-          mapa: "https://maps.google.com/?q=Marco+das+Tres+Fronteiras+Foz",
+          nome: "Itaipu Especial",
+          prioridade: "Alta",
+          endereco: "Av. Tancredo Neves, 6731, Foz do Iguaçu - PR",
+          mapa: "https://maps.google.com/?q=Itaipu+Binacional",
           ingresso: {
-            valor: "R$ 55,00",
-            comprado: true,
-            oficial: "https://marcodastresfronteiras.com.br"
-          },
-          funcionamento: {
-            dias: "Terça a domingo",
-            entrada: "13:30 às 21:00"
-          },
-          planejamento: {
-            distancia: "12 km do centro",
-            tempo: "2 horas",
-            valor: "R$ 55,00"
-          },
-          checklist: ["Documento", "Câmera", "Agasalho leve"],
-          notas: "Chegar no pôr do sol para aproveitar a vista e o show noturno."
-        },
-        {
-          nome: "Duty Free Puerto Iguazú",
-          prioridade: "Baixa",
-          endereco: "Ruta 12 Km 1645, Puerto Iguazú, Misiones, Argentina",
-          mapa: "https://maps.google.com/?q=Duty+Free+Puerto+Iguazu",
-          ingresso: {
-            valor: "Sem ingresso",
-            comprado: true,
-            oficial: "https://www.dutyfreeshoppuertoiguazu.com"
+            valor: "R$ 185,00",
+            comprado: false,
+            oficial: "https://www.turismoitaipu.com.br"
           },
           funcionamento: {
             dias: "Todos os dias",
-            entrada: "12:00 às 21:00"
+            entrada: "{{SEM INFORMAÇÃO}}"
           },
           planejamento: {
-            distancia: "18 km do centro",
-            tempo: "1h30",
-            valor: "Sem ingresso"
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "2h a 3h",
+            valor: "R$ 185,00"
           },
-          checklist: ["Documento original", "Cartão habilitado internacional"],
-          notas: "Verificar cotação antes e priorizar itens planejados para evitar compras por impulso."
+          checklist: ["Documento", "Chegar com antecedência"],
+          notas: "Escolher o passeio mais completo conforme planejado."
+        },
+        {
+          nome: "Templo Chen Tien",
+          prioridade: "Média",
+          endereco: "Rua Dr. Josivalter Vila Nova, Foz do Iguaçu - PR",
+          mapa: "https://maps.google.com/?q=Templo+Chen+Tien",
+          ingresso: {
+            valor: "Grátis",
+            comprado: true,
+            oficial: "{{SEM INFORMAÇÃO}}"
+          },
+          funcionamento: {
+            dias: "Todos os dias",
+            entrada: "{{SEM INFORMAÇÃO}}"
+          },
+          planejamento: {
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "1h",
+            valor: "Grátis"
+          },
+          checklist: ["Respeitar o ambiente", "Câmera"],
+          notas: "Local tranquilo, bom para fotos e contemplação."
+        },
+        {
+          nome: "Mercado Barrageiro",
+          prioridade: "Baixa",
+          endereco: "{{SEM INFORMAÇÃO}}",
+          mapa: "{{SEM INFORMAÇÃO}}",
+          ingresso: {
+            valor: "Grátis",
+            comprado: true,
+            oficial: "{{SEM INFORMAÇÃO}}"
+          },
+          funcionamento: {
+            dias: "{{SEM INFORMAÇÃO}}",
+            entrada: "{{SEM INFORMAÇÃO}}"
+          },
+          planejamento: {
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "Livre",
+            valor: "Variável"
+          },
+          checklist: ["Dinheiro ou cartão"],
+          notas: "Parada opcional para compras ou alimentação."
+        },
+        {
+          nome: "Mesquita Omar Ibn Al-Khattab",
+          prioridade: "Média",
+          endereco: "Rua Meca, 599, Foz do Iguaçu - PR",
+          mapa: "https://maps.google.com/?q=Mesquita+Omar+Ibn+Al+Khattab",
+          ingresso: {
+            valor: "R$ 40",
+            comprado: false,
+            oficial: "{{SEM INFORMAÇÃO}}"
+          },
+          funcionamento: {
+            dias: "{{SEM INFORMAÇÃO}}",
+            entrada: "{{SEM INFORMAÇÃO}}"
+          },
+          planejamento: {
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "1h",
+            valor: "R$ 40"
+          },
+          checklist: ["Roupas adequadas"],
+          notas: "Respeitar regras de vestimenta e horários."
         }
       ]
     },
     {
       id: "dia-3",
       label: "Dia 3",
-      titulo: "Dia 3 — Lado argentino",
-      data: "Quarta-feira, 14 de outubro",
-      observacao: "Dia de caminhada longa e trilhas, reservar energia.",
+      titulo: "Dia 3 — Compras e fronteira",
+      data: "26 de abril",
+      observacao: "Dia mais flexível, focado em compras e deslocamentos.",
       passeios: [
         {
-          nome: "Cataratas do Iguaçu (Argentina)",
-          prioridade: "Alta",
-          endereco: "Parque Nacional Iguazú, Misiones, Argentina",
-          mapa: "https://maps.google.com/?q=Parque+Nacional+Iguazu+Argentina",
+          nome: "Paraguai (Ciudad del Este)",
+          prioridade: "Média",
+          endereco: "Ciudad del Este, Paraguai",
+          mapa: "https://maps.google.com/?q=Ciudad+del+Este",
           ingresso: {
-            valor: "AR$ consultar no site",
-            comprado: false,
-            oficial: "https://iguazuargentina.com"
+            valor: "Grátis",
+            comprado: true,
+            oficial: "{{SEM INFORMAÇÃO}}"
           },
           funcionamento: {
             dias: "Todos os dias",
-            entrada: "08:00 às 16:00"
+            entrada: "{{SEM INFORMAÇÃO}}"
           },
           planejamento: {
-            distancia: "30 km do centro",
-            tempo: "Dia inteiro",
-            valor: "AR$ consultar no site"
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "Meio dia ou mais",
+            valor: "Variável"
           },
-          checklist: ["Passaporte ou RG", "Tênis confortável", "Lanche"],
-          notas: "Checar fila da imigração e levar documento físico em bom estado."
+          checklist: ["Documento original", "Cuidado com compras"],
+          notas: "Verificar cotação e evitar horários de pico."
+        },
+        {
+          nome: "Marco das Três Fronteiras",
+          prioridade: "Baixa",
+          endereco: "Av. General Meira, Foz do Iguaçu - PR",
+          mapa: "https://maps.google.com/?q=Marco+das+Tres+Fronteiras",
+          ingresso: {
+            valor: "R$ 60",
+            comprado: false,
+            oficial: "https://marcodastresfronteiras.com.br"
+          },
+          funcionamento: {
+            dias: "{{SEM INFORMAÇÃO}}",
+            entrada: "{{SEM INFORMAÇÃO}}"
+          },
+          planejamento: {
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "2h",
+            valor: "R$ 60"
+          },
+          checklist: ["Câmera"],
+          notas: "Passeio coringa. Ideal para pôr do sol."
         }
       ]
     },
     {
       id: "dia-4",
       label: "Dia 4",
-      titulo: "Dia 4 — Itaipu e retorno",
-      data: "Quinta-feira, 15 de outubro",
-      observacao: "Dia de passeio técnico e encerramento da viagem.",
+      titulo: "Dia 4 — Lado argentino e encerramento",
+      data: "27 de abril",
+      observacao: "Dia de bastante caminhada. Reservar energia.",
       passeios: [
         {
-          nome: "Itaipu Panorâmica",
-          prioridade: "Média",
-          endereco: "Av. Tancredo Neves, 6731, Foz do Iguaçu - PR",
-          mapa: "https://maps.google.com/?q=Itaipu+Panoramica+Foz+do+Iguacu",
+          nome: "Parque Nacional Iguazú (Argentina)",
+          prioridade: "Alta",
+          endereco: "Puerto Iguazú, Argentina",
+          mapa: "https://maps.google.com/?q=Parque+Nacional+Iguazu",
           ingresso: {
-            valor: "R$ 59,00",
-            comprado: true,
-            oficial: "https://www.turismoitaipu.com.br"
+            valor: "R$ ~170",
+            comprado: false,
+            oficial: "https://iguazuargentina.com"
           },
           funcionamento: {
             dias: "Todos os dias",
-            entrada: "08:30 às 17:00"
+            entrada: "{{SEM INFORMAÇÃO}}"
           },
           planejamento: {
-            distancia: "13 km do centro",
-            tempo: "1h30",
-            valor: "R$ 59,00"
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "Dia inteiro",
+            valor: "R$ ~170"
           },
-          checklist: ["Documento", "Chegar com 15 min de antecedência"],
-          notas: "Ideal para finalizar a viagem com baixa exigência física."
+          checklist: ["Documento", "Tênis confortável", "Água"],
+          notas: "Caminha bastante. Dia mais cansativo da viagem."
+        },
+        {
+          nome: "Feira de Porto Iguazú",
+          prioridade: "Baixa",
+          endereco: "Puerto Iguazú, Argentina",
+          mapa: "https://maps.google.com/?q=Feira+Puerto+Iguazu",
+          ingresso: {
+            valor: "Grátis",
+            comprado: true,
+            oficial: "{{SEM INFORMAÇÃO}}"
+          },
+          funcionamento: {
+            dias: "{{SEM INFORMAÇÃO}}",
+            entrada: "{{SEM INFORMAÇÃO}}"
+          },
+          planejamento: {
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "1h",
+            valor: "Variável"
+          },
+          checklist: ["Dinheiro"],
+          notas: "Boa opção para comprar lembranças."
+        },
+        {
+          nome: "Restaurante Tarobá",
+          prioridade: "Média",
+          endereco: "{{SEM INFORMAÇÃO}}",
+          mapa: "{{SEM INFORMAÇÃO}}",
+          ingresso: {
+            valor: "Variável",
+            comprado: true,
+            oficial: "{{SEM INFORMAÇÃO}}"
+          },
+          funcionamento: {
+            dias: "{{SEM INFORMAÇÃO}}",
+            entrada: "{{SEM INFORMAÇÃO}}"
+          },
+          planejamento: {
+            distancia: "{{SEM INFORMAÇÃO}}",
+            tempo: "1h30",
+            valor: "Variável"
+          },
+          checklist: [],
+          notas: "Encerramento da viagem."
         }
       ]
     }
