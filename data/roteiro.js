@@ -8,72 +8,72 @@
     {
       id: "dia-1",
       label: "Dia 1",
-      titulo: "Dia 1 — Natureza e primeiros impactos",
+      titulo: "Dia 1 — Cataratas",
       data: "24 de abril",
-      observacao: "Dia intenso com principais atrações naturais. Priorizar energia e organização.",
+      observacao: "Dia focado na principal atração da viagem, as Cataratas do Iguaçu.",
       passeios: [
         {
-          nome: "Cataratas do Iguaçu (Brasil)",
+          nome: "Parque Nacional do Iguaçu",
           prioridade: "Alta",
-          endereco: "Rodovia BR-469, Km 18, Foz do Iguaçu - PR",
-          mapa: "https://maps.google.com/?q=Cataratas+do+Iguacu+Brasil",
+          endereco: "Rodovia BR-469, KM 18, Foz do Iguaçu - PR",
+          mapa: "https://maps.app.goo.gl/4uwBSY9uVCUJikzz6",
           ingresso: {
-            valor: "R$ 118,00",
-            comprado: false,
+            valor: "R$ 121,00",
+            comprado: true,
             oficial: "https://cataratasdoiguacu.com.br"
           },
           funcionamento: {
             dias: "Todos os dias",
-            entrada: "{{SEM INFORMAÇÃO}}"
+            entrada: "8:30* às 16:00"
           },
           planejamento: {
-            distancia: "{{SEM INFORMAÇÃO}}",
-            tempo: "2h a 3h",
-            valor: "R$ 118,00"
+            distancia: "~ 15km",
+            tempo: "~ 25min",
+            valor: "~ R$ 33,00"
           },
-          checklist: ["Repelente", "Protetor solar", "Garrafa d'água"],
-          notas: "Passeio principal do dia. Pode ter bastante caminhada."
+          checklist: ["Repelente", "Protetor solar", "Roupa extra", "Bolsa impermeável"],
+          notas: "Colocar 'Parque Nacional do Iguaçu' no Uber."
         },
         {
           nome: "Macuco Safari",
-          prioridade: "Alta",
-          endereco: "Dentro do Parque Nacional do Iguaçu",
-          mapa: "https://maps.google.com/?q=Macuco+Safari",
+          prioridade: "Média",
+          endereco: "Rodovia BR-469, KM 18, Foz do Iguaçu - PR",
+          mapa: "https://maps.app.goo.gl/4uwBSY9uVCUJikzz6",
           ingresso: {
             valor: "R$ 384,00",
-            comprado: false,
+            comprado: true,
             oficial: "https://macucosafari.com.br"
           },
           funcionamento: {
             dias: "Todos os dias",
-            entrada: "{{SEM INFORMAÇÃO}}"
+            entrada: "8:30* às 16:00"
           },
           planejamento: {
-            distancia: "Mesmo local das Cataratas",
-            tempo: "1h30",
-            valor: "R$ 384,00"
+            distancia: "~ 15km",
+            tempo: "~ 25min",
+            valor: "~ R$ 33,00"
           },
-          checklist: ["Roupa extra", "Capa de chuva", "Protetor solar"],
+          checklist: ["Repelente", "Protetor solar", "Roupa extra", "Bolsa impermeável"],
           notas: "Passeio molhado. Levar troca de roupa obrigatoriamente."
         },
         {
           nome: "Parque das Aves",
-          prioridade: "Média",
-          endereco: "Av. das Cataratas, 12450, Foz do Iguaçu - PR",
-          mapa: "https://maps.google.com/?q=Parque+das+Aves+Foz+do+Iguacu",
+          prioridade: "Alta",
+          endereco: "Av. das Cataratas, 12450 - KM 17",
+          mapa: "https://maps.app.goo.gl/BbPbadtnaaNb7vvbA",
           ingresso: {
             valor: "R$ 110,00",
-            comprado: false,
+            comprado: true,
             oficial: "https://www.parquedasaves.com.br"
           },
           funcionamento: {
             dias: "Todos os dias",
-            entrada: "{{SEM INFORMAÇÃO}}"
+            entrada: "8:30 às 16:00"
           },
           planejamento: {
-            distancia: "Ao lado das Cataratas",
-            tempo: "1h30 a 2h",
-            valor: "R$ 110,00"
+            distancia: "~ 15km",
+            tempo: "~ 25min",
+            valor: "~ R$ 33,00"
           },
           checklist: ["Repelente", "Celular carregado"],
           notas: "Pode ser feito após as Cataratas."
@@ -82,23 +82,23 @@
           nome: "Avenida Pedro Basso",
           prioridade: "Baixa",
           endereco: "Av. Pedro Basso, Foz do Iguaçu - PR",
-          mapa: "https://maps.google.com/?q=Avenida+Pedro+Basso",
+          mapa: "https://maps.app.goo.gl/S8knFJHUwZ6fAHNY9",
           ingresso: {
             valor: "Grátis",
             comprado: true,
-            oficial: "{{SEM INFORMAÇÃO}}"
+            oficial: "https://g1.globo.com/pr/oeste-sudoeste/noticia/2023/01/25/avenida-considerada-mais-bonita-de-foz-do-iguacu-tem-tunel-verde-com-mais-de-150-arvores-conheca-historia.ghtml"
           },
           funcionamento: {
             dias: "Todos os dias",
             entrada: "Livre"
           },
           planejamento: {
-            distancia: "{{SEM INFORMAÇÃO}}",
-            tempo: "Livre",
-            valor: "Grátis"
+            distancia: "~ 3km",
+            tempo: "5min",
+            valor: "~ R$ 17,00"
           },
           checklist: [],
-          notas: "Passeio leve ou deslocamento. Verificar intenção real no roteiro."
+          notas: "Um passeio 'Coringa' que podemos deixa para qualquer dia por ser próximo."
         }
       ]
     },
